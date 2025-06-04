@@ -15,6 +15,7 @@ public class mainWindow extends javax.swing.JFrame {
      */
     public mainWindow() {
         initComponents();
+        templates.setVisible(false);
     }
 
     /**
@@ -26,40 +27,153 @@ public class mainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Сlose = new javax.swing.JButton();
+        leftPanel = new javax.swing.JPanel();
+        chooseTemplate = new javax.swing.JButton();
+        closeButton = new javax.swing.JButton();
+        openMainPage = new javax.swing.JButton();
+        rightPanel = new javax.swing.JLayeredPane();
+        mainPageText = new javax.swing.JLabel();
+        templates = new javax.swing.JTabbedPane();
+        rentPanel = new javax.swing.JPanel();
+        rentButton = new javax.swing.JButton();
+        rentImage = new javax.swing.JLabel();
+        salesPanel = new javax.swing.JPanel();
+        salesImage = new javax.swing.JLabel();
+        salesButton = new javax.swing.JButton();
+        invoicePanel = new javax.swing.JPanel();
+        invoiceButton = new javax.swing.JButton();
+        invoiceImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("mainPage"); // NOI18N
+        setSize(new java.awt.Dimension(1920, 1080));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Сlose.setText("Закрыть");
-        Сlose.addActionListener(new java.awt.event.ActionListener() {
+        leftPanel.setPreferredSize(new java.awt.Dimension(300, 1080));
+
+        chooseTemplate.setText("Выбрать шаблон");
+        chooseTemplate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                СloseActionPerformed(evt);
+                chooseTemplateActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(318, Short.MAX_VALUE)
-                .addComponent(Сlose)
-                .addContainerGap())
+        closeButton.setText("Закрыть приложение");
+        closeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                closeButtonActionPerformed(evt);
+            }
+        });
+
+        openMainPage.setText("Главная");
+        openMainPage.setPreferredSize(new java.awt.Dimension(300, 60));
+        openMainPage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                openMainPageActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout leftPanelLayout = new javax.swing.GroupLayout(leftPanel);
+        leftPanel.setLayout(leftPanelLayout);
+        leftPanelLayout.setHorizontalGroup(
+            leftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(leftPanelLayout.createSequentialGroup()
+                .addGroup(leftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chooseTemplate, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(openMainPage, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(271, Short.MAX_VALUE)
-                .addComponent(Сlose)
-                .addContainerGap())
+        leftPanelLayout.setVerticalGroup(
+            leftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(leftPanelLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(openMainPage, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chooseTemplate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(722, Short.MAX_VALUE))
         );
+
+        getContentPane().add(leftPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 1080));
+
+        rightPanel.setBackground(new java.awt.Color(255, 255, 255));
+        rightPanel.setForeground(new java.awt.Color(0, 0, 0));
+        rightPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        mainPageText.setBackground(new java.awt.Color(255, 255, 255));
+        mainPageText.setFont(new java.awt.Font("Adwaita Sans", 0, 18)); // NOI18N
+        mainPageText.setForeground(new java.awt.Color(0, 0, 0));
+        mainPageText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mainPageText.setText("Автозаполнитель документов");
+        mainPageText.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        mainPageText.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        rightPanel.add(mainPageText, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
+
+        templates.setPreferredSize(new java.awt.Dimension(1620, 1080));
+
+        rentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        rentButton.setText("Сформировать");
+        rentButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rentButtonActionPerformed(evt);
+            }
+        });
+        rentPanel.add(rentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 900, 1620, 100));
+
+        rentImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dreamy-scenery-3840x2160-18770.jpeg"))); // NOI18N
+        rentImage.setText("jLabel1");
+        rentPanel.add(rentImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1620, 900));
+
+        templates.addTab("Договор аренды", rentPanel);
+
+        salesPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        salesImage.setText("jLabel1");
+        salesPanel.add(salesImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1620, 900));
+
+        salesButton.setText("Сформировать");
+        salesPanel.add(salesButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 900, 1620, 100));
+
+        templates.addTab("Договор купли-продажи", salesPanel);
+
+        invoicePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        invoiceButton.setText("Сформировать");
+        invoicePanel.add(invoiceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 900, 1620, 100));
+
+        invoiceImage.setText("jLabel1");
+        invoicePanel.add(invoiceImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1620, 900));
+
+        templates.addTab("Договор купли-продажи", invoicePanel);
+
+        rightPanel.add(templates, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        getContentPane().add(rightPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 1620, 1080));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void СloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_СloseActionPerformed
+    private void chooseTemplateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTemplateActionPerformed
+        mainPageText.setVisible(false);
+        templates.setVisible(true);
+    }//GEN-LAST:event_chooseTemplateActionPerformed
+
+    private void closeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeButtonActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_СloseActionPerformed
+    }//GEN-LAST:event_closeButtonActionPerformed
+    //Главная
+    private void openMainPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMainPageActionPerformed
+        if(!mainPageText.isVisible()){
+            mainPageText.setVisible(true);
+        }
+    }//GEN-LAST:event_openMainPageActionPerformed
+
+    private void rentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rentButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rentButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,6 +212,21 @@ public class mainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Сlose;
+    private javax.swing.JButton chooseTemplate;
+    private javax.swing.JButton closeButton;
+    private javax.swing.JButton invoiceButton;
+    private javax.swing.JLabel invoiceImage;
+    private javax.swing.JPanel invoicePanel;
+    private javax.swing.JPanel leftPanel;
+    private javax.swing.JLabel mainPageText;
+    private javax.swing.JButton openMainPage;
+    private javax.swing.JButton rentButton;
+    private javax.swing.JLabel rentImage;
+    private javax.swing.JPanel rentPanel;
+    private javax.swing.JLayeredPane rightPanel;
+    private javax.swing.JButton salesButton;
+    private javax.swing.JLabel salesImage;
+    private javax.swing.JPanel salesPanel;
+    private javax.swing.JTabbedPane templates;
     // End of variables declaration//GEN-END:variables
 }
