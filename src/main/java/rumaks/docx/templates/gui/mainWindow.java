@@ -123,7 +123,6 @@ public class mainWindow extends javax.swing.JFrame {
         });
         rentPanel.add(rentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 900, 1620, 100));
 
-        rentImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dreamy-scenery-3840x2160-18770.jpeg"))); // NOI18N
         rentImage.setText("jLabel1");
         rentPanel.add(rentImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1620, 900));
 
@@ -166,6 +165,7 @@ public class mainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_closeButtonActionPerformed
     //Главная
     private void openMainPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMainPageActionPerformed
+        templates.setVisible(false);
         if(!mainPageText.isVisible()){
             mainPageText.setVisible(true);
         }
