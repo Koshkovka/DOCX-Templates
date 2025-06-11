@@ -47,7 +47,6 @@ public class mainWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("mainPage"); // NOI18N
         setSize(new java.awt.Dimension(1920, 1080));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         leftPanel.setPreferredSize(new java.awt.Dimension(300, 1080));
 
@@ -93,14 +92,11 @@ public class mainWindow extends javax.swing.JFrame {
                 .addComponent(chooseTemplate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(722, Short.MAX_VALUE))
+                .addContainerGap(725, Short.MAX_VALUE))
         );
-
-        getContentPane().add(leftPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 1080));
 
         rightPanel.setBackground(new java.awt.Color(255, 255, 255));
         rightPanel.setForeground(new java.awt.Color(0, 0, 0));
-        rightPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         mainPageText.setBackground(new java.awt.Color(255, 255, 255));
         mainPageText.setFont(new java.awt.Font("Adwaita Sans", 0, 18)); // NOI18N
@@ -109,11 +105,8 @@ public class mainWindow extends javax.swing.JFrame {
         mainPageText.setText("Автозаполнитель документов");
         mainPageText.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         mainPageText.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        rightPanel.add(mainPageText, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         templates.setPreferredSize(new java.awt.Dimension(1620, 1080));
-
-        rentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         rentButton.setText("Сформировать");
         rentButton.addActionListener(new java.awt.event.ActionListener() {
@@ -121,36 +114,98 @@ public class mainWindow extends javax.swing.JFrame {
                 rentButtonActionPerformed(evt);
             }
         });
-        rentPanel.add(rentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 900, 1620, 100));
 
         rentImage.setText("jLabel1");
-        rentPanel.add(rentImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1620, 900));
+
+        javax.swing.GroupLayout rentPanelLayout = new javax.swing.GroupLayout(rentPanel);
+        rentPanel.setLayout(rentPanelLayout);
+        rentPanelLayout.setHorizontalGroup(
+            rentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(rentImage, javax.swing.GroupLayout.PREFERRED_SIZE, 1620, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(rentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 1620, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        rentPanelLayout.setVerticalGroup(
+            rentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(rentPanelLayout.createSequentialGroup()
+                .addComponent(rentImage, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(rentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         templates.addTab("Договор аренды", rentPanel);
 
-        salesPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         salesImage.setText("jLabel1");
-        salesPanel.add(salesImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1620, 900));
 
         salesButton.setText("Сформировать");
-        salesPanel.add(salesButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 900, 1620, 100));
+
+        javax.swing.GroupLayout salesPanelLayout = new javax.swing.GroupLayout(salesPanel);
+        salesPanel.setLayout(salesPanelLayout);
+        salesPanelLayout.setHorizontalGroup(
+            salesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(salesImage, javax.swing.GroupLayout.PREFERRED_SIZE, 1620, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(salesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 1620, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        salesPanelLayout.setVerticalGroup(
+            salesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(salesPanelLayout.createSequentialGroup()
+                .addComponent(salesImage, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(salesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         templates.addTab("Договор купли-продажи", salesPanel);
 
-        invoicePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         invoiceButton.setText("Сформировать");
-        invoicePanel.add(invoiceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 900, 1620, 100));
 
         invoiceImage.setText("jLabel1");
-        invoicePanel.add(invoiceImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1620, 900));
+
+        javax.swing.GroupLayout invoicePanelLayout = new javax.swing.GroupLayout(invoicePanel);
+        invoicePanel.setLayout(invoicePanelLayout);
+        invoicePanelLayout.setHorizontalGroup(
+            invoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(invoiceImage, javax.swing.GroupLayout.PREFERRED_SIZE, 1620, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(invoiceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 1620, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        invoicePanelLayout.setVerticalGroup(
+            invoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(invoicePanelLayout.createSequentialGroup()
+                .addComponent(invoiceImage, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(invoiceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         templates.addTab("Договор купли-продажи", invoicePanel);
 
-        rightPanel.add(templates, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        rightPanel.setLayer(mainPageText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        rightPanel.setLayer(templates, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        getContentPane().add(rightPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 1620, 1080));
+        javax.swing.GroupLayout rightPanelLayout = new javax.swing.GroupLayout(rightPanel);
+        rightPanel.setLayout(rightPanelLayout);
+        rightPanelLayout.setHorizontalGroup(
+            rightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mainPageText)
+            .addComponent(templates, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        rightPanelLayout.setVerticalGroup(
+            rightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mainPageText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(templates, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(leftPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(rightPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(leftPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(rightPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
