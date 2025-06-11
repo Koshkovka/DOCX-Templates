@@ -1,24 +1,19 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Базовый класс для всех документов
  */
 package rumaks.docx.templates;
 
-/**
- *
- * @author kotyo
- */
 import org.apache.poi.xwpf.usermodel.*;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Map;
 
-//  Базовый класс для всех документов
-
 public abstract class Document {
     protected XWPFDocument document; 
     protected Map<String, String> data;  // Данные для заполнения
+    protected static final String FONT = "Times New Roman";
+    protected static final int TITLE_SIZE = 14;
+    protected static final int TEXT_SIZE = 12;
 
     public Document(Map<String, String> data) {
         this.document = new XWPFDocument();
@@ -28,8 +23,21 @@ public abstract class Document {
     public abstract void generateContent();  // Заполнение документа
 
     public void saveToFile(String filePath) throws IOException {
-        try (FileOutputStream out = new FileOutputStream(filePath)) {
+        try (var out = new FileOutputStream(filePath)) {
             document.write(out);
         }
+    }
+
+    protected void addEmptyLine(XWPFParagraph paragraph, XWPFRun run, int count) {
+        for (int i = 0; i < count; i++) {
+            run.addBreak();
+        }
+    }
+
+    protected XWPFRun createRunWithFormatting(XWPFParagraph paragraph) {
+        XWPFRun run = paragraph.createRun();
+        run.setFontFamily(FONT);
+        run.setFontSize(TEXT_SIZE);
+        return run;
     }
 }
