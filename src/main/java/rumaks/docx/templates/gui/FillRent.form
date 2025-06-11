@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="Fields" alignment="1" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="generate" pref="388" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="Fields" min="-2" pref="538" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="generate" min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="Fields">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[400, 450]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="agreementNumber" alignment="1" max="32767" attributes="0"/>
+                      <Component id="agreementDate" alignment="0" max="32767" attributes="0"/>
+                      <Component id="city" alignment="0" max="32767" attributes="0"/>
+                      <Component id="tenantFullName" alignment="0" max="32767" attributes="0"/>
+                      <Component id="landlordShortName" alignment="0" max="32767" attributes="0"/>
+                      <Component id="startDate" alignment="1" max="32767" attributes="0"/>
+                      <Component id="rentAmount" alignment="0" max="32767" attributes="0"/>
+                      <Component id="endDate" alignment="0" max="32767" attributes="0"/>
+                      <Component id="propertyAddress" alignment="0" max="32767" attributes="0"/>
+                      <Component id="propertyDescription" alignment="0" max="32767" attributes="0"/>
+                      <Component id="tenantShortName" alignment="1" max="32767" attributes="0"/>
+                      <Component id="rentAmountWords" alignment="0" max="32767" attributes="0"/>
+                      <Component id="paymentDay" alignment="0" max="32767" attributes="0"/>
+                      <Component id="landlordFullName" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="agreementNumber" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="agreementDate" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="city" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="landlordFullName" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="landlordShortName" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tenantFullName" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tenantShortName" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="propertyDescription" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="propertyAddress" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="startDate" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="endDate" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rentAmount" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="rentAmountWords" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="paymentDay" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTextField" name="agreementNumber">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x41d;&#x43e;&#x43c;&#x435;&#x440; &#x434;&#x43e;&#x433;&#x43e;&#x432;&#x43e;&#x440;&#x430;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="agreementDate">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x414;&#x430;&#x442;&#x430; &#x437;&#x430;&#x43a;&#x43b;&#x44e;&#x447;&#x435;&#x43d;&#x438;&#x44f; (&#x432; &#x444;&#x43e;&#x440;&#x43c;&#x430;&#x442;&#x435; &quot;&#x434;&#x434;.&#x43c;&#x43c;.&#x433;&#x433;&#x433;&#x433;&quot;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="city">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x413;&#x43e;&#x440;&#x43e;&#x434; &#x437;&#x430;&#x43a;&#x43b;&#x44e;&#x447;&#x435;&#x43d;&#x438;&#x44f;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tenantFullName">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x43b;&#x43d;&#x43e;&#x435; &#x43d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43a;&#x43e;&#x43c;&#x43f;&#x430;&#x43d;&#x438;&#x438; &#x430;&#x440;&#x435;&#x43d;&#x434;&#x430;&#x442;&#x43e;&#x440;&#x430;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="landlordShortName">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x41a;&#x440;&#x430;&#x442;&#x43a;&#x43e;&#x435; &#x438;&#x43c;&#x44f; &#x430;&#x440;&#x435;&#x43d;&#x434;&#x43e;&#x434;&#x430;&#x442;&#x435;&#x43b;&#x44f; "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="landlordFullName">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x43b;&#x43d;&#x43e;&#x435; &#x43d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43a;&#x43e;&#x43c;&#x43f;&#x430;&#x43d;&#x438;&#x438; &#x430;&#x440;&#x435;&#x43d;&#x434;&#x43e;&#x434;&#x430;&#x442;&#x435;&#x43b;&#x44f;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="startDate">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x414;&#x430;&#x442;&#x430; &#x43d;&#x430;&#x447;&#x430;&#x43b;&#x430; &#x430;&#x440;&#x435;&#x43d;&#x434;&#x44b; (&#x432; &#x444;&#x43e;&#x440;&#x43c;&#x430;&#x442;&#x435; &quot;&#x434;&#x434;.&#x43c;&#x43c;.&#x433;&#x433;&#x433;&#x433;&quot;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="rentAmount">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430; &#x430;&#x440;&#x435;&#x43d;&#x434;&#x43d;&#x43e;&#x439; &#x43f;&#x43b;&#x430;&#x442;&#x44b; (&#x446;&#x438;&#x444;&#x440;&#x430;&#x43c;&#x438;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="endDate">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x414;&#x430;&#x442;&#x430; &#x43e;&#x43a;&#x43e;&#x43d;&#x447;&#x430;&#x43d;&#x438;&#x44f; &#x430;&#x440;&#x435;&#x43d;&#x434;&#x44b; (&#x432; &#x444;&#x43e;&#x440;&#x43c;&#x430;&#x442;&#x435; &quot;&#x434;&#x434;.&#x43c;&#x43c;.&#x433;&#x433;&#x433;&#x433;&quot;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="propertyAddress">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x410;&#x434;&#x440;&#x435;&#x441; &#x438;&#x43c;&#x443;&#x449;&#x435;&#x441;&#x442;&#x432;&#x430;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="propertyDescription">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x41e;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435; &#x438;&#x43c;&#x443;&#x449;&#x435;&#x441;&#x442;&#x432;&#x430;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tenantShortName">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x41a;&#x440;&#x430;&#x442;&#x43a;&#x43e;&#x435; &#x438;&#x43c;&#x44f; &#x430;&#x440;&#x435;&#x43d;&#x434;&#x430;&#x442;&#x43e;&#x440;&#x430;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="rentAmountWords">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430; &#x430;&#x440;&#x435;&#x43d;&#x434;&#x43d;&#x43e;&#x439; &#x43f;&#x43b;&#x430;&#x442;&#x44b; (&#x441;&#x43b;&#x43e;&#x432;&#x430;&#x43c;&#x438;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="paymentDay">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="16" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x427;&#x438;&#x441;&#x43b;&#x43e; &#x43c;&#x435;&#x441;&#x44f;&#x446;&#x430;, &#x434;&#x43e; &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x43e;&#x433;&#x43e; &#x43f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x434;&#x438;&#x442;&#x441;&#x44f; &#x43e;&#x43f;&#x43b;&#x430;&#x442;&#x430;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="generate">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x421;&#x444;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generateActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>

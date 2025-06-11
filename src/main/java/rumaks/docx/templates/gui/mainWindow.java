@@ -4,6 +4,9 @@
  */
 package rumaks.docx.templates.gui;
 
+import java.awt.Dialog;
+import javax.swing.JDialog;
+
 /**
  *
  * @author kotyo
@@ -137,6 +140,11 @@ public class mainWindow extends javax.swing.JFrame {
         salesImage.setText("jLabel1");
 
         salesButton.setText("Сформировать");
+        salesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salesButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout salesPanelLayout = new javax.swing.GroupLayout(salesPanel);
         salesPanel.setLayout(salesPanelLayout);
@@ -156,6 +164,11 @@ public class mainWindow extends javax.swing.JFrame {
         templates.addTab("Договор купли-продажи", salesPanel);
 
         invoiceButton.setText("Сформировать");
+        invoiceButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                invoiceButtonActionPerformed(evt);
+            }
+        });
 
         invoiceImage.setText("jLabel1");
 
@@ -227,8 +240,25 @@ public class mainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_openMainPageActionPerformed
 
     private void rentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rentButtonActionPerformed
-        // TODO add your handling code here:
+        FillRent rent = new FillRent(this, rootPaneCheckingEnabled);
+        rent.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE); // Закрывает только это окно
+        rent.setModal(true); // Блокирует взаимодействие с главным окном, пока открыто
+        rent.setVisible(true);
     }//GEN-LAST:event_rentButtonActionPerformed
+
+    private void salesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salesButtonActionPerformed
+        FillSales sales = new FillSales(this, rootPaneCheckingEnabled);
+        sales.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE); 
+        sales.setModal(true); 
+        sales.setVisible(true);
+    }//GEN-LAST:event_salesButtonActionPerformed
+
+    private void invoiceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_invoiceButtonActionPerformed
+        FillInvoice invoice = new FillInvoice(this, rootPaneCheckingEnabled);
+        invoice.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE); 
+        invoice.setModal(true); 
+        invoice.setVisible(true);
+    }//GEN-LAST:event_invoiceButtonActionPerformed
 
     /**
      * @param args the command line arguments
