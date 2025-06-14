@@ -142,6 +142,8 @@ public class mainWindow extends javax.swing.JFrame {
             }
         });
         rentPanel.add(rentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 700, 1290, 60));
+
+        rentImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.jpg"))); // NOI18N
         rentPanel.add(rentImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 1250, 663));
 
         templates.addTab("Договор аренды", rentPanel);
