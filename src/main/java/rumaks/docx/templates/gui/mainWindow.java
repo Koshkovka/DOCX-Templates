@@ -141,7 +141,7 @@ public class mainWindow extends javax.swing.JFrame {
                 rentButtonActionPerformed(evt);
             }
         });
-        rentPanel.add(rentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 700, 1290, 60));
+        rentPanel.add(rentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 700, -1, 60));
 
         rentImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.jpg"))); // NOI18N
         rentPanel.add(rentImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 1250, 663));
@@ -165,6 +165,7 @@ public class mainWindow extends javax.swing.JFrame {
         salesImage.setBackground(new java.awt.Color(193, 200, 228));
         salesImage.setForeground(new java.awt.Color(193, 200, 228));
         salesImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        salesImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sales.jpg"))); // NOI18N
         salesPanel.add(salesImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         templates.addTab("Договор купли-продажи", salesPanel);
@@ -174,6 +175,7 @@ public class mainWindow extends javax.swing.JFrame {
 
         invoiceImage.setBackground(new java.awt.Color(193, 200, 0));
         invoiceImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        invoiceImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/invoice.jpg"))); // NOI18N
         invoicePanel.add(invoiceImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 619));
 
         invoiceButton.setBackground(new java.awt.Color(86, 128, 233));

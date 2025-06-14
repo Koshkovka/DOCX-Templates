@@ -286,6 +286,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="generate">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="16" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="&#x421;&#x444;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c;"/>
       </Properties>
       <Events>
@@ -377,9 +380,6 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buyerAddressActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="buyerINN">
           <Properties>
@@ -404,9 +404,6 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buyerAccountActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="buyerBank">
           <Properties>
@@ -419,9 +416,6 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buyerBankActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="buyerBIK">
           <Properties>

@@ -4,6 +4,17 @@
  */
 package rumaks.docx.templates.gui;
 
+import java.awt.Desktop;
+import java.awt.HeadlessException;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import rumaks.docx.templates.Invoice;
+
 /**
  *
  * @author kotyo
@@ -11,6 +22,7 @@ package rumaks.docx.templates.gui;
 public class FillInvoice extends javax.swing.JDialog {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FillInvoice.class.getName());
+    private Map<String, String> data;
 
     /**
      * Creates new form invoiceFille
@@ -18,6 +30,7 @@ public class FillInvoice extends javax.swing.JDialog {
     public FillInvoice(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        data = new HashMap<>(); 
     }
 
     /**
@@ -177,11 +190,6 @@ public class FillInvoice extends javax.swing.JDialog {
         providerAddress.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         providerAddress.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         providerAddress.setText("Адрес поставщика");
-        providerAddress.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                providerAddressActionPerformed(evt);
-            }
-        });
 
         providerINN.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         providerINN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -253,12 +261,88 @@ public class FillInvoice extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void generateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_generateActionPerformed
+       // Собираем данные из формы
+        data.clear();
+        // Основные реквизиты документа
+        data.put("number", number.getText());
+        data.put("date", date.getText());
 
-    private void providerAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_providerAddressActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_providerAddressActionPerformed
+        // Данные поставщика
+        data.put("providerName", providerName.getText());
+        data.put("providerAddress", providerAddress.getText());
+        data.put("providerINN", providerINN.getText());
+        data.put("providerKPP", providerKPP.getText());
+
+        // Данные покупателя
+        data.put("customerName", customerName.getText());
+        data.put("customerAddress", customerAddress.getText());
+        data.put("customerINN", customerINN.getText());
+        data.put("customerKPP", customerKPP.getText());
+
+        // Товарные позиции
+        data.put("itemName1", itemName1.getText());
+        data.put("itemUnit1", itemUnit1.getText());
+        data.put("itemQuantity1", itemQuantity1.getText());
+        data.put("itemPrice1", itemPrice1.getText());
+
+        // Создаем диалог выбора файла
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Сохранить счёт-фактуру");
+
+        // Устанавливаем фильтр для .docx файлов
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                "Документы Word (*.docx)", "docx");
+        fileChooser.setFileFilter(filter);
+
+        // Предлагаем имя файла по умолчанию
+        String defaultFileName = "Счёт-фактура_" + number.getText() + "_от_" + date.getText() + ".docx";
+        fileChooser.setSelectedFile(new File(defaultFileName));
+
+        // Показываем диалог сохранения
+        int userSelection = fileChooser.showSaveDialog(this);
+
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            File fileToSave = fileChooser.getSelectedFile();
+            String filePath = fileToSave.getAbsolutePath();
+
+            // Добавляем расширение .docx, если его нет
+            if (!filePath.toLowerCase().endsWith(".docx")) {
+                filePath += ".docx";
+                fileToSave = new File(filePath);
+            }
+
+            // Проверка на существование файла
+            if (fileToSave.exists()) {
+                int response = JOptionPane.showConfirmDialog(this,
+                    "Файл уже существует. Перезаписать?",
+                    "Подтверждение",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.WARNING_MESSAGE);
+
+                if (response != JOptionPane.YES_OPTION) {
+                    return;
+                }
+            }
+
+            // Создаем и сохраняем документ
+            Invoice invoice = new Invoice(data);
+            try {
+                invoice.generateContent();
+                invoice.saveToFile(filePath);
+
+                JOptionPane.showMessageDialog(this, 
+                    "Счёт-фактура успешно сохранена!\n" + filePath, 
+                    "Сохранение завершено", 
+                    JOptionPane.INFORMATION_MESSAGE);
+            } catch (HeadlessException | IOException ex) {
+                JOptionPane.showMessageDialog(this, 
+                    "Ошибка при сохранении файла:\n" + ex.getMessage(), 
+                    "Ошибка", 
+                    JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        
+    }//GEN-LAST:event_generateActionPerformed
 
     /**
      * @param args the command line arguments

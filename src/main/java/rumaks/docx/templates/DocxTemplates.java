@@ -14,6 +14,6 @@ public class DocxTemplates {
 
     public static void main(String[] args) {
         mainWindow window = new mainWindow();
-        window.show();
+        window.setVisible(true);
     }
 }

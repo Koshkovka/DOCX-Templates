@@ -4,6 +4,16 @@
  */
 package rumaks.docx.templates.gui;
 
+import java.awt.HeadlessException;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import rumaks.docx.templates.SalesContract;
+
 /**
  *
  * @author kotyo
@@ -11,13 +21,17 @@ package rumaks.docx.templates.gui;
 public class FillSales extends javax.swing.JDialog {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FillSales.class.getName());
+    private Map<String, String> data;
 
     /**
      * Creates new form salesContractFille
+     * @param parent
+     * @param modal
      */
     public FillSales(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        data = new HashMap<>();    
     }
 
     /**
@@ -187,6 +201,7 @@ public class FillSales extends javax.swing.JDialog {
                 .addComponent(paymentTerms, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        generate.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         generate.setText("Сформировать");
         generate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,11 +226,6 @@ public class FillSales extends javax.swing.JDialog {
         buyerAddress.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         buyerAddress.setText(" Адрес покупателя");
         buyerAddress.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buyerAddress.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buyerAddressActionPerformed(evt);
-            }
-        });
 
         buyerINN.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         buyerINN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -226,21 +236,11 @@ public class FillSales extends javax.swing.JDialog {
         buyerAccount.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         buyerAccount.setText("Расчётный счёт покупателя");
         buyerAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buyerAccount.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buyerAccountActionPerformed(evt);
-            }
-        });
 
         buyerBank.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         buyerBank.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         buyerBank.setText("Банк покупателя");
         buyerBank.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buyerBank.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buyerBankActionPerformed(evt);
-            }
-        });
 
         buyerBIK.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         buyerBIK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -352,20 +352,90 @@ public class FillSales extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void generateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateActionPerformed
+         // Собираем данные из формы
+        data.clear();
+        data.put("contractNumber", contractNumber.getText());
+        data.put("contractDate", contractDate.getText());
+        data.put("city", city.getText());
+        data.put("sellerFullName", sellerFullName.getText());
+        data.put("sellerSignatory", sellerSignatory.getText());
+        data.put("sellerAddress", sellerAddress.getText());
+        data.put("sellerINN", sellerINN.getText());
+        data.put("sellerAccount", sellerAccount.getText());
+        data.put("sellerBank", sellerBank.getText());
+        data.put("sellerBIK", sellerBIK.getText());
+        data.put("buyerFullName", buyerFullName.getText());
+        data.put("buyerSignatory", buyerSignatory.getText());
+        data.put("buyerAddress", buyerAddress.getText());
+        data.put("buyerINN", buyerINN.getText());
+        data.put("buyerAccount", buyerAccount.getText());
+        data.put("buyerBank", buyerBank.getText());
+        data.put("buyerBIK", buyerBIK.getText());
+        data.put("productDescription", productDescription.getText());
+        data.put("quantity", quantity.getText());
+        data.put("unit", unit.getText());
+        data.put("totalPrice", totalPrice.getText());
+        data.put("totalPriceWords", totalPriceWords.getText());
+        data.put("paymentTerms", paymentTerms.getText());
 
+        // Создаем диалог выбора файла
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Сохранить договор купли-продажи");
+
+        // Устанавливаем фильтр для .docx файлов
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                "Документы Word (*.docx)", "docx");
+        fileChooser.setFileFilter(filter);
+
+        // Предлагаем имя файла по умолчанию
+        String defaultFileName = "Договор_КП_" + contractNumber.getText() + ".docx";
+        fileChooser.setSelectedFile(new File(defaultFileName));
+
+        // Показываем диалог сохранения
+        int userSelection = fileChooser.showSaveDialog(this);
+
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            File fileToSave = fileChooser.getSelectedFile();
+            String filePath = fileToSave.getAbsolutePath();
+
+            // Добавляем расширение .docx, если его нет
+            if (!filePath.toLowerCase().endsWith(".docx")) {
+                filePath += ".docx";
+                fileToSave = new File(filePath);
+            }
+
+            // Проверка на существование файла
+            if (fileToSave.exists()) {
+                int response = JOptionPane.showConfirmDialog(this,
+                    "Файл уже существует. Перезаписать?",
+                    "Подтверждение",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.WARNING_MESSAGE);
+
+                if (response != JOptionPane.YES_OPTION) {
+                    return;
+                }
+            }
+
+            // Создаем и сохраняем документ
+            SalesContract sales = new SalesContract(data);
+            try {
+                sales.generateContent();
+                sales.saveToFile(filePath);
+
+                JOptionPane.showMessageDialog(this, 
+                    "Договор успешно сохранен!\n" + filePath, 
+                    "Сохранение завершено", 
+                    JOptionPane.INFORMATION_MESSAGE);
+            } catch (HeadlessException | IOException ex) {
+                JOptionPane.showMessageDialog(this, 
+                    "Ошибка при сохранении файла:\n" + ex.getMessage(), 
+                    "Ошибка", 
+                    JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        
     }//GEN-LAST:event_generateActionPerformed
-
-    private void buyerAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buyerAddressActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buyerAddressActionPerformed
-
-    private void buyerAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buyerAccountActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buyerAccountActionPerformed
-
-    private void buyerBankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buyerBankActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buyerBankActionPerformed
 
     /**
      * @param args the command line arguments

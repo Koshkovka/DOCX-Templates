@@ -4,6 +4,16 @@
  */
 package rumaks.docx.templates.gui;
 
+import java.awt.HeadlessException;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import rumaks.docx.templates.RentalAgreement;
+
 /**
  *
  * @author kotyo
@@ -11,13 +21,14 @@ package rumaks.docx.templates.gui;
 public class FillRent extends javax.swing.JDialog {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FillRent.class.getName());
-
+    private Map<String, String> data;
     /**
      * Creates new form rentFille
      */
     public FillRent(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        data = new HashMap<>(); 
     }
 
     /**
@@ -194,7 +205,77 @@ public class FillRent extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void generateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateActionPerformed
-        // TODO add your handling code here:
+        data.clear();
+        data.put("agreementNumber", agreementNumber.getText());
+        data.put("agreementDate", agreementDate.getText());
+        data.put("city", city.getText());
+        data.put("landlordFullName", landlordFullName.getText());
+        data.put("landlordShortName", landlordShortName.getText());
+        data.put("tenantFullName", tenantFullName.getText());
+        data.put("tenantShortName", tenantShortName.getText());
+        data.put("propertyDescription", propertyDescription.getText());
+        data.put("propertyAddress", propertyAddress.getText());
+        data.put("startDate", startDate.getText());
+        data.put("endDate", endDate.getText());
+        data.put("rentAmount", rentAmount.getText());
+        data.put("rentAmountWords", rentAmountWords.getText());
+        data.put("paymentDay", paymentDay.getText());
+
+        // Создаем диалог выбора файла
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Сохранить договор аренды");
+
+        // Устанавливаем фильтр для .docx файлов
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                "Документы Word (*.docx)", "docx");
+        fileChooser.setFileFilter(filter);
+
+        // Предлагаем имя файла по умолчанию
+        String defaultFileName = "Договор_аренды_" + agreementNumber.getText() + ".docx";
+        fileChooser.setSelectedFile(new File(defaultFileName));
+
+        // Показываем диалог сохранения
+        int userSelection = fileChooser.showSaveDialog(this);
+
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            File fileToSave = fileChooser.getSelectedFile();
+            String filePath = fileToSave.getAbsolutePath();
+
+            // Добавляем расширение .docx, если его нет
+            if (!filePath.toLowerCase().endsWith(".docx")) {
+                filePath += ".docx";
+            }
+
+            // Проверка на существование файла
+            if (fileToSave.exists()) {
+                int response = JOptionPane.showConfirmDialog(this,
+                    "Файл уже существует. Перезаписать?",
+                    "Подтверждение",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.WARNING_MESSAGE);
+
+                if (response != JOptionPane.YES_OPTION) {
+                    return;
+                }
+            }
+
+            // Создаем и сохраняем документ
+            RentalAgreement rent = new RentalAgreement(data);
+            try {
+                rent.generateContent();
+                rent.saveToFile(filePath);
+
+                JOptionPane.showMessageDialog(this, 
+                    "Договор успешно сохранен!\n" + filePath, 
+                    "Сохранение завершено", 
+                    JOptionPane.INFORMATION_MESSAGE);
+            } catch (HeadlessException | IOException ex) {
+                JOptionPane.showMessageDialog(this, 
+                    "Ошибка при сохранении файла:\n" + ex.getMessage(), 
+                    "Ошибка", 
+                    JOptionPane.ERROR_MESSAGE);
+            }
+        }
     }//GEN-LAST:event_generateActionPerformed
 
     /**
