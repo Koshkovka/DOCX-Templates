@@ -61,5 +61,11 @@
             <version>1.3</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE90</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 </project>
