@@ -44,309 +44,281 @@ public class FillSales extends javax.swing.JDialog {
     private void initComponents() {
 
         left = new javax.swing.JPanel();
-        sellerFullName = new javax.swing.JTextField();
-        sellerSignatory = new javax.swing.JTextField();
-        sellerAddress = new javax.swing.JTextField();
-        sellerINN = new javax.swing.JTextField();
-        sellerAccount = new javax.swing.JTextField();
-        sellerBank = new javax.swing.JTextField();
-        sellerBIK = new javax.swing.JTextField();
+        sellerFullName = new org.jdesktop.swingx.JXTextField();
+        sellerSignatory = new org.jdesktop.swingx.JXTextField();
+        sellerAddress = new org.jdesktop.swingx.JXTextField();
+        sellerINN = new org.jdesktop.swingx.JXTextField();
+        sellerAccount = new org.jdesktop.swingx.JXTextField();
+        sellerBank = new org.jdesktop.swingx.JXTextField();
+        sellerBIK = new org.jdesktop.swingx.JXTextField();
         bottom = new javax.swing.JPanel();
-        productDescription = new javax.swing.JTextField();
-        quantity = new javax.swing.JTextField();
-        unit = new javax.swing.JTextField();
-        totalPrice = new javax.swing.JTextField();
-        totalPriceWords = new javax.swing.JTextField();
-        paymentTerms = new javax.swing.JTextField();
+        productDescription = new org.jdesktop.swingx.JXTextField();
+        quantity = new org.jdesktop.swingx.JXTextField();
+        unit = new org.jdesktop.swingx.JXTextField();
+        totalPrice = new org.jdesktop.swingx.JXTextField();
+        totalPriceWords = new org.jdesktop.swingx.JXTextField();
+        paymentTerms = new org.jdesktop.swingx.JXTextField();
         generate = new javax.swing.JButton();
         right = new javax.swing.JPanel();
-        buyerFullName = new javax.swing.JTextField();
-        buyerSignatory = new javax.swing.JTextField();
-        buyerAddress = new javax.swing.JTextField();
-        buyerINN = new javax.swing.JTextField();
-        buyerAccount = new javax.swing.JTextField();
-        buyerBank = new javax.swing.JTextField();
-        buyerBIK = new javax.swing.JTextField();
+        buyerFullName = new org.jdesktop.swingx.JXTextField();
+        buyerSignatory = new org.jdesktop.swingx.JXTextField();
+        buyerAddress = new org.jdesktop.swingx.JXTextField();
+        buyerINN = new org.jdesktop.swingx.JXTextField();
+        buyerAccount = new org.jdesktop.swingx.JXTextField();
+        buyerBank = new org.jdesktop.swingx.JXTextField();
+        buyerBIK = new org.jdesktop.swingx.JXTextField();
         top = new javax.swing.JPanel();
-        contractNumber = new javax.swing.JTextField();
-        contractDate = new javax.swing.JTextField();
-        city = new javax.swing.JTextField();
+        contractNumber = new org.jdesktop.swingx.JXTextField();
+        contractDate = new org.jdesktop.swingx.JXTextField();
+        city = new org.jdesktop.swingx.JXTextField();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(193, 200, 228));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        left.setBackground(new java.awt.Color(193, 200, 228));
         left.setPreferredSize(new java.awt.Dimension(350, 266));
+        left.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        sellerFullName.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        sellerFullName.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         sellerFullName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        sellerFullName.setText("Полное имя продавца");
-        sellerFullName.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sellerFullName.setPrompt("Полное имя продавца");
+        sellerFullName.setPromptBackround(new java.awt.Color(64, 86, 161));
+        sellerFullName.setPromptForeground(new java.awt.Color(255, 255, 255));
+        left.add(sellerFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 338, 32));
 
-        sellerSignatory.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        sellerSignatory.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         sellerSignatory.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        sellerSignatory.setText("ФИО подписанта продавца");
-        sellerSignatory.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sellerSignatory.setPrompt("ФИО подписанта продавца");
+        sellerSignatory.setPromptBackround(new java.awt.Color(64, 86, 161));
+        sellerSignatory.setPromptForeground(new java.awt.Color(255, 255, 255));
+        left.add(sellerSignatory, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 44, 338, 32));
 
-        sellerAddress.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        sellerAddress.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         sellerAddress.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        sellerAddress.setText(" Адрес продавца");
-        sellerAddress.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sellerAddress.setPrompt("Адрес продавца");
+        sellerAddress.setPromptBackround(new java.awt.Color(64, 86, 161));
+        sellerAddress.setPromptForeground(new java.awt.Color(255, 255, 255));
+        left.add(sellerAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 82, 338, 32));
 
-        sellerINN.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        sellerINN.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         sellerINN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        sellerINN.setText("ИНН продавца");
-        sellerINN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sellerINN.setPrompt("ИНН продавца");
+        sellerINN.setPromptBackround(new java.awt.Color(64, 86, 161));
+        sellerINN.setPromptForeground(new java.awt.Color(255, 255, 255));
+        left.add(sellerINN, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 120, 338, 32));
 
-        sellerAccount.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        sellerAccount.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         sellerAccount.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        sellerAccount.setText("Расчётный счёт продавца");
-        sellerAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sellerAccount.setPrompt("Расчётный счёт продавца");
+        sellerAccount.setPromptBackround(new java.awt.Color(64, 86, 161));
+        sellerAccount.setPromptForeground(new java.awt.Color(255, 255, 255));
+        left.add(sellerAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 158, 338, 32));
 
-        sellerBank.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        sellerBank.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         sellerBank.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        sellerBank.setText("Банк продавца");
-        sellerBank.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sellerBank.setPrompt("Банк продавца");
+        sellerBank.setPromptBackround(new java.awt.Color(64, 86, 161));
+        sellerBank.setPromptForeground(new java.awt.Color(255, 255, 255));
+        left.add(sellerBank, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 196, 338, 32));
 
-        sellerBIK.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        sellerBIK.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         sellerBIK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        sellerBIK.setText("БИК банка продавца");
-        sellerBIK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sellerBIK.setPrompt("БИК банка продавца");
+        sellerBIK.setPromptBackround(new java.awt.Color(64, 86, 161));
+        sellerBIK.setPromptForeground(new java.awt.Color(255, 255, 255));
+        sellerBIK.setSelectedTextColor(new java.awt.Color(64, 86, 161));
+        left.add(sellerBIK, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 234, 338, 32));
 
-        javax.swing.GroupLayout leftLayout = new javax.swing.GroupLayout(left);
-        left.setLayout(leftLayout);
-        leftLayout.setHorizontalGroup(
-            leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(leftLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sellerFullName)
-                    .addComponent(sellerSignatory, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
-                    .addComponent(sellerAddress)
-                    .addComponent(sellerINN)
-                    .addComponent(sellerAccount)
-                    .addComponent(sellerBank)
-                    .addComponent(sellerBIK))
-                .addContainerGap())
-        );
-        leftLayout.setVerticalGroup(
-            leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(leftLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(sellerFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sellerSignatory, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sellerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sellerINN, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sellerAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sellerBank, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sellerBIK, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(left, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 128, -1, -1));
 
-        productDescription.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        bottom.setBackground(new java.awt.Color(193, 200, 228));
+        bottom.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        productDescription.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         productDescription.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        productDescription.setText("Описание товара");
+        productDescription.setPrompt("Описание товара");
+        productDescription.setPromptBackround(new java.awt.Color(64, 86, 161));
+        productDescription.setPromptForeground(new java.awt.Color(255, 255, 255));
+        bottom.add(productDescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 688, 32));
 
-        quantity.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        quantity.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         quantity.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        quantity.setText("Количество товара");
+        quantity.setPrompt("Количество товара");
+        quantity.setPromptBackround(new java.awt.Color(64, 86, 161));
+        quantity.setPromptForeground(new java.awt.Color(255, 255, 255));
+        bottom.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 36, 688, 34));
 
-        unit.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        unit.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         unit.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        unit.setText(" Единица измерения (например, \"шт.\")");
+        unit.setPrompt("Единица измерения (например, \"шт.\")");
+        unit.setPromptBackround(new java.awt.Color(64, 86, 161));
+        unit.setPromptForeground(new java.awt.Color(255, 255, 255));
+        bottom.add(unit, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 76, 688, 32));
 
-        totalPrice.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        totalPrice.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         totalPrice.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        totalPrice.setText("Общая стоимость (цифрами)");
+        totalPrice.setPrompt("Общая стоимость (цифрами)");
+        totalPrice.setPromptBackround(new java.awt.Color(64, 86, 161));
+        totalPrice.setPromptForeground(new java.awt.Color(255, 255, 255));
+        bottom.add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 114, 688, 32));
 
-        totalPriceWords.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        totalPriceWords.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         totalPriceWords.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        totalPriceWords.setText("Общая стоимость (прописью)");
+        totalPriceWords.setPrompt("Общая стоимость (прописью)");
+        totalPriceWords.setPromptBackround(new java.awt.Color(64, 86, 161));
+        totalPriceWords.setPromptForeground(new java.awt.Color(255, 255, 255));
+        bottom.add(totalPriceWords, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 152, 688, 32));
 
-        paymentTerms.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        paymentTerms.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         paymentTerms.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        paymentTerms.setText("Условия оплаты");
+        paymentTerms.setPrompt("Условия оплаты");
+        paymentTerms.setPromptBackround(new java.awt.Color(64, 86, 161));
+        paymentTerms.setPromptForeground(new java.awt.Color(255, 255, 255));
+        bottom.add(paymentTerms, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 190, 688, 37));
 
-        javax.swing.GroupLayout bottomLayout = new javax.swing.GroupLayout(bottom);
-        bottom.setLayout(bottomLayout);
-        bottomLayout.setHorizontalGroup(
-            bottomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bottomLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(bottomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(productDescription)
-                    .addComponent(quantity)
-                    .addComponent(unit, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
-                    .addComponent(totalPrice)
-                    .addComponent(totalPriceWords)
-                    .addComponent(paymentTerms))
-                .addContainerGap())
-        );
-        bottomLayout.setVerticalGroup(
-            bottomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bottomLayout.createSequentialGroup()
-                .addComponent(productDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(totalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(totalPriceWords, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(paymentTerms, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(bottom, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 700, -1));
 
-        generate.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        generate.setBackground(new java.awt.Color(86, 128, 233));
+        generate.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        generate.setForeground(new java.awt.Color(255, 255, 255));
         generate.setText("Сформировать");
+        generate.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         generate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 generateActionPerformed(evt);
             }
         });
+        getContentPane().add(generate, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 645, 688, 64));
 
+        right.setBackground(new java.awt.Color(193, 200, 228));
         right.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         right.setPreferredSize(new java.awt.Dimension(350, 266));
 
-        buyerFullName.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        buyerFullName.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         buyerFullName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        buyerFullName.setText("Полное имя покупателя");
-        buyerFullName.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buyerFullName.setPrompt("Полное имя покупателя");
+        buyerFullName.setPromptBackround(new java.awt.Color(64, 86, 161));
+        buyerFullName.setPromptForeground(new java.awt.Color(255, 255, 255));
 
-        buyerSignatory.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        buyerSignatory.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         buyerSignatory.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        buyerSignatory.setText("ФИО подписанта покупателя");
-        buyerSignatory.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buyerSignatory.setPrompt("ФИО подписанта покупателя");
+        buyerSignatory.setPromptBackround(new java.awt.Color(64, 86, 161));
+        buyerSignatory.setPromptForeground(new java.awt.Color(255, 255, 255));
 
-        buyerAddress.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        buyerAddress.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         buyerAddress.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        buyerAddress.setText(" Адрес покупателя");
-        buyerAddress.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buyerAddress.setPrompt("Адрес покупателя");
+        buyerAddress.setPromptBackround(new java.awt.Color(64, 86, 161));
+        buyerAddress.setPromptForeground(new java.awt.Color(255, 255, 255));
 
-        buyerINN.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        buyerINN.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         buyerINN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        buyerINN.setText("ИНН покупателя");
-        buyerINN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buyerINN.setPrompt("ИНН покупателя");
+        buyerINN.setPromptBackround(new java.awt.Color(64, 86, 161));
+        buyerINN.setPromptForeground(new java.awt.Color(255, 255, 255));
 
-        buyerAccount.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        buyerAccount.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         buyerAccount.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        buyerAccount.setText("Расчётный счёт покупателя");
-        buyerAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buyerAccount.setPrompt("Расчётный счёт покупателя");
+        buyerAccount.setPromptBackround(new java.awt.Color(64, 86, 161));
+        buyerAccount.setPromptForeground(new java.awt.Color(255, 255, 255));
 
-        buyerBank.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        buyerBank.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         buyerBank.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        buyerBank.setText("Банк покупателя");
-        buyerBank.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buyerBank.setPrompt("Банк покупателя");
+        buyerBank.setPromptBackround(new java.awt.Color(64, 86, 161));
+        buyerBank.setPromptForeground(new java.awt.Color(255, 255, 255));
 
-        buyerBIK.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        buyerBIK.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         buyerBIK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        buyerBIK.setText("БИК банка покупателя");
-        buyerBIK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buyerBIK.setPrompt("БИК банка покупателя");
+        buyerBIK.setPromptBackround(new java.awt.Color(64, 86, 161));
+        buyerBIK.setPromptForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout rightLayout = new javax.swing.GroupLayout(right);
         right.setLayout(rightLayout);
         rightLayout.setHorizontalGroup(
             rightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rightLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addGroup(rightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buyerSignatory, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                    .addComponent(buyerAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                    .addComponent(buyerINN, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                    .addComponent(buyerAccount, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                    .addComponent(buyerBank, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                    .addComponent(buyerBIK, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                    .addComponent(buyerFullName, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE))
+                    .addComponent(buyerFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buyerSignatory, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buyerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buyerAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buyerBank, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buyerBIK, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rightLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(buyerINN, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         rightLayout.setVerticalGroup(
             rightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rightLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(6, 6, 6)
                 .addComponent(buyerFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(buyerSignatory, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(buyerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(buyerINN, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(buyerAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(buyerBank, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(buyerBIK, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        contractNumber.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        getContentPane().add(right, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 128, 344, -1));
+
+        top.setBackground(new java.awt.Color(193, 200, 228));
+        top.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        contractNumber.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
+        contractNumber.setForeground(new java.awt.Color(255, 255, 255));
         contractNumber.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        contractNumber.setText("Номер договора");
+        contractNumber.setPrompt("Номер договора");
+        contractNumber.setPromptBackround(new java.awt.Color(64, 86, 161));
+        contractNumber.setPromptForeground(new java.awt.Color(255, 255, 255));
+        top.add(contractNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 688, 32));
 
-        contractDate.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        contractDate.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         contractDate.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        contractDate.setText("Дата заключения (в формате \"дд.мм.гггг\")");
+        contractDate.setPrompt("Дата заключения (в формате \"дд.мм.гггг\")");
+        contractDate.setPromptBackround(new java.awt.Color(64, 86, 161));
+        contractDate.setPromptForeground(new java.awt.Color(255, 255, 255));
+        top.add(contractDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 44, 688, 34));
 
-        city.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        city.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         city.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        city.setText("Город заключения");
+        city.setPrompt("Город заключения");
+        city.setPromptBackround(new java.awt.Color(64, 86, 161));
+        city.setPromptForeground(new java.awt.Color(255, 255, 255));
+        top.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 84, 688, 32));
 
-        javax.swing.GroupLayout topLayout = new javax.swing.GroupLayout(top);
-        top.setLayout(topLayout);
-        topLayout.setHorizontalGroup(
-            topLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(topLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(city)
-                    .addComponent(contractDate, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(contractNumber))
-                .addContainerGap())
+        getContentPane().add(top, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, 700, -1));
+
+        jPanel1.setBackground(new java.awt.Color(193, 200, 228));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
-        topLayout.setVerticalGroup(
-            topLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(topLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(contractNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contractDate, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(city, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 720, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bottom, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(top, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(left, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(right, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(generate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(top, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(left, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(right, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bottom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(generate, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 720));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -476,32 +448,33 @@ public class FillSales extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bottom;
-    private javax.swing.JTextField buyerAccount;
-    private javax.swing.JTextField buyerAddress;
-    private javax.swing.JTextField buyerBIK;
-    private javax.swing.JTextField buyerBank;
-    private javax.swing.JTextField buyerFullName;
-    private javax.swing.JTextField buyerINN;
-    private javax.swing.JTextField buyerSignatory;
-    private javax.swing.JTextField city;
-    private javax.swing.JTextField contractDate;
-    private javax.swing.JTextField contractNumber;
+    private org.jdesktop.swingx.JXTextField buyerAccount;
+    private org.jdesktop.swingx.JXTextField buyerAddress;
+    private org.jdesktop.swingx.JXTextField buyerBIK;
+    private org.jdesktop.swingx.JXTextField buyerBank;
+    private org.jdesktop.swingx.JXTextField buyerFullName;
+    private org.jdesktop.swingx.JXTextField buyerINN;
+    private org.jdesktop.swingx.JXTextField buyerSignatory;
+    private org.jdesktop.swingx.JXTextField city;
+    private org.jdesktop.swingx.JXTextField contractDate;
+    private org.jdesktop.swingx.JXTextField contractNumber;
     private javax.swing.JButton generate;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel left;
-    private javax.swing.JTextField paymentTerms;
-    private javax.swing.JTextField productDescription;
-    private javax.swing.JTextField quantity;
+    private org.jdesktop.swingx.JXTextField paymentTerms;
+    private org.jdesktop.swingx.JXTextField productDescription;
+    private org.jdesktop.swingx.JXTextField quantity;
     private javax.swing.JPanel right;
-    private javax.swing.JTextField sellerAccount;
-    private javax.swing.JTextField sellerAddress;
-    private javax.swing.JTextField sellerBIK;
-    private javax.swing.JTextField sellerBank;
-    private javax.swing.JTextField sellerFullName;
-    private javax.swing.JTextField sellerINN;
-    private javax.swing.JTextField sellerSignatory;
+    private org.jdesktop.swingx.JXTextField sellerAccount;
+    private org.jdesktop.swingx.JXTextField sellerAddress;
+    private org.jdesktop.swingx.JXTextField sellerBIK;
+    private org.jdesktop.swingx.JXTextField sellerBank;
+    private org.jdesktop.swingx.JXTextField sellerFullName;
+    private org.jdesktop.swingx.JXTextField sellerINN;
+    private org.jdesktop.swingx.JXTextField sellerSignatory;
     private javax.swing.JPanel top;
-    private javax.swing.JTextField totalPrice;
-    private javax.swing.JTextField totalPriceWords;
-    private javax.swing.JTextField unit;
+    private org.jdesktop.swingx.JXTextField totalPrice;
+    private org.jdesktop.swingx.JXTextField totalPriceWords;
+    private org.jdesktop.swingx.JXTextField unit;
     // End of variables declaration//GEN-END:variables
 }

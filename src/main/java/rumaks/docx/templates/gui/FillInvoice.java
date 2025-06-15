@@ -43,219 +43,174 @@ public class FillInvoice extends javax.swing.JDialog {
     private void initComponents() {
 
         Top = new javax.swing.JPanel();
-        number = new javax.swing.JTextField();
-        date = new javax.swing.JTextField();
+        number = new org.jdesktop.swingx.JXTextField();
+        date = new org.jdesktop.swingx.JXTextField();
         generate = new javax.swing.JButton();
         Right = new javax.swing.JPanel();
-        customerName = new javax.swing.JTextField();
-        customerAddress = new javax.swing.JTextField();
-        customerINN = new javax.swing.JTextField();
-        customerKPP = new javax.swing.JTextField();
+        customerName = new org.jdesktop.swingx.JXTextField();
+        customerAddress = new org.jdesktop.swingx.JXTextField();
+        customerINN = new org.jdesktop.swingx.JXTextField();
+        customerKPP = new org.jdesktop.swingx.JXTextField();
         Bottom = new javax.swing.JPanel();
-        itemName1 = new javax.swing.JTextField();
-        itemUnit1 = new javax.swing.JTextField();
-        itemPrice1 = new javax.swing.JTextField();
-        itemQuantity1 = new javax.swing.JTextField();
+        itemName1 = new org.jdesktop.swingx.JXTextField();
+        itemUnit1 = new org.jdesktop.swingx.JXTextField();
+        itemQuantity1 = new org.jdesktop.swingx.JXTextField();
+        itemPrice1 = new org.jdesktop.swingx.JXTextField();
         Left = new javax.swing.JPanel();
-        providerName = new javax.swing.JTextField();
-        providerAddress = new javax.swing.JTextField();
-        providerINN = new javax.swing.JTextField();
-        providerKPP = new javax.swing.JTextField();
+        providerName = new org.jdesktop.swingx.JXTextField();
+        providerAddress = new org.jdesktop.swingx.JXTextField();
+        providerINN = new org.jdesktop.swingx.JXTextField();
+        providerKPP = new org.jdesktop.swingx.JXTextField();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Top.setBackground(new java.awt.Color(193, 200, 228));
         Top.setPreferredSize(new java.awt.Dimension(400, 450));
+        Top.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        number.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        number.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         number.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        number.setText("Номер счёта-фактуры");
+        number.setPrompt("Номер счёта_фактуры");
+        number.setPromptBackround(new java.awt.Color(64, 86, 161));
+        number.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Top.add(number, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 606, 32));
 
-        date.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        date.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         date.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        date.setText("Дата счёта-фактуры (в формате \"дд.мм.гггг\")");
+        date.setPrompt("Дата счёта-фактуры (в формате \"дд.мм.гггг\")");
+        date.setPromptBackround(new java.awt.Color(64, 86, 161));
+        date.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Top.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 44, 606, 32));
 
-        javax.swing.GroupLayout TopLayout = new javax.swing.GroupLayout(Top);
-        Top.setLayout(TopLayout);
-        TopLayout.setHorizontalGroup(
-            TopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TopLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(TopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(number)
-                    .addComponent(date))
-                .addContainerGap())
-        );
-        TopLayout.setVerticalGroup(
-            TopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TopLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(number, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(Top, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 618, 76));
 
-        generate.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        generate.setBackground(new java.awt.Color(86, 128, 233));
+        generate.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        generate.setForeground(new java.awt.Color(255, 255, 255));
         generate.setText("Сформировать");
+        generate.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         generate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 generateActionPerformed(evt);
             }
         });
+        getContentPane().add(generate, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 404, 606, 50));
 
-        customerName.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        Right.setBackground(new java.awt.Color(193, 200, 228));
+        Right.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        customerName.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         customerName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        customerName.setText("Наименование покупателя");
+        customerName.setPrompt("Наименование покупателя");
+        customerName.setPromptBackround(new java.awt.Color(64, 86, 161));
+        customerName.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Right.add(customerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 294, 32));
 
-        customerAddress.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        customerAddress.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         customerAddress.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        customerAddress.setText("Адрес покупателя");
+        customerAddress.setPrompt("Адрес покупателя");
+        customerAddress.setPromptBackround(new java.awt.Color(64, 86, 161));
+        customerAddress.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Right.add(customerAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 44, 294, 32));
 
-        customerINN.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        customerINN.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         customerINN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        customerINN.setText("ИНН покупателя");
+        customerINN.setPrompt("ИНН покупателя");
+        customerINN.setPromptBackround(new java.awt.Color(64, 86, 161));
+        customerINN.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Right.add(customerINN, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 82, 294, 32));
 
-        customerKPP.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        customerKPP.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         customerKPP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        customerKPP.setText("КПП покупателя");
+        customerKPP.setPrompt("КПП покупателя");
+        customerKPP.setPromptBackround(new java.awt.Color(64, 86, 161));
+        customerKPP.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Right.add(customerKPP, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 120, 294, 38));
 
-        javax.swing.GroupLayout RightLayout = new javax.swing.GroupLayout(Right);
-        Right.setLayout(RightLayout);
-        RightLayout.setHorizontalGroup(
-            RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(customerKPP)
-                    .addComponent(customerINN, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(customerAddress, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(customerName, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        RightLayout.setVerticalGroup(
-            RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RightLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(customerName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(customerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(customerINN, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(customerKPP, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(Right, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 82, -1, 164));
 
-        itemName1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        Bottom.setBackground(new java.awt.Color(193, 200, 228));
+        Bottom.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        itemName1.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         itemName1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        itemName1.setText("Наименование товара");
+        itemName1.setPrompt("Наименование товара");
+        itemName1.setPromptBackround(new java.awt.Color(64, 86, 161));
+        itemName1.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Bottom.add(itemName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 606, 32));
 
-        itemUnit1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        itemUnit1.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         itemUnit1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        itemUnit1.setText("Единица измерения");
+        itemUnit1.setPrompt("Единица измерения");
+        itemUnit1.setPromptBackround(new java.awt.Color(64, 86, 161));
+        itemUnit1.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Bottom.add(itemUnit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 38, 606, 32));
 
-        itemPrice1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        itemPrice1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        itemPrice1.setText("Цена за единицу");
-
-        itemQuantity1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        itemQuantity1.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         itemQuantity1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        itemQuantity1.setText("Количество");
+        itemQuantity1.setPrompt("Количество");
+        itemQuantity1.setPromptBackround(new java.awt.Color(64, 86, 161));
+        itemQuantity1.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Bottom.add(itemQuantity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 76, 606, 32));
 
-        javax.swing.GroupLayout BottomLayout = new javax.swing.GroupLayout(Bottom);
-        Bottom.setLayout(BottomLayout);
-        BottomLayout.setHorizontalGroup(
-            BottomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(itemName1)
-            .addComponent(itemUnit1, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(itemQuantity1)
-            .addComponent(itemPrice1, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
-        BottomLayout.setVerticalGroup(
-            BottomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BottomLayout.createSequentialGroup()
-                .addComponent(itemName1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemUnit1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemQuantity1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemPrice1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
-        );
+        itemPrice1.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
+        itemPrice1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        itemPrice1.setPrompt("Цена за единицу");
+        itemPrice1.setPromptBackround(new java.awt.Color(64, 86, 161));
+        itemPrice1.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Bottom.add(itemPrice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 114, 606, 32));
 
-        providerName.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        getContentPane().add(Bottom, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 252, 620, -1));
+
+        Left.setBackground(new java.awt.Color(193, 200, 228));
+        Left.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        providerName.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         providerName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        providerName.setText("Наименование поставщика");
+        providerName.setPrompt("Наименование поставщика");
+        providerName.setPromptBackround(new java.awt.Color(64, 86, 161));
+        providerName.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Left.add(providerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 300, 32));
 
-        providerAddress.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        providerAddress.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         providerAddress.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        providerAddress.setText("Адрес поставщика");
+        providerAddress.setPrompt("Адрес поставщика");
+        providerAddress.setPromptBackround(new java.awt.Color(64, 86, 161));
+        providerAddress.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Left.add(providerAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 44, 300, 32));
 
-        providerINN.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        providerINN.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         providerINN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        providerINN.setText("ИНН поставщика");
+        providerINN.setPrompt("ИНН поставщика");
+        providerINN.setPromptBackround(new java.awt.Color(64, 86, 161));
+        providerINN.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Left.add(providerINN, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 82, 300, 32));
 
-        providerKPP.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        providerKPP.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         providerKPP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        providerKPP.setText("КПП поставщика");
+        providerKPP.setPrompt("КПП поставщика");
+        providerKPP.setPromptBackround(new java.awt.Color(64, 86, 161));
+        providerKPP.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Left.add(providerKPP, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 120, 300, 38));
 
-        javax.swing.GroupLayout LeftLayout = new javax.swing.GroupLayout(Left);
-        Left.setLayout(LeftLayout);
-        LeftLayout.setHorizontalGroup(
-            LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LeftLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(providerName)
-                    .addComponent(providerAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                    .addComponent(providerINN, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                    .addComponent(providerKPP, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
+        getContentPane().add(Left, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 82, -1, 164));
+
+        jPanel1.setBackground(new java.awt.Color(193, 200, 228));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 620, Short.MAX_VALUE)
         );
-        LeftLayout.setVerticalGroup(
-            LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LeftLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(providerName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(providerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(providerINN, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(providerKPP, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 460, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Top, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Left, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Right, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Bottom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(generate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Top, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Left, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Right, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Bottom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(generate, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -386,20 +341,21 @@ public class FillInvoice extends javax.swing.JDialog {
     private javax.swing.JPanel Left;
     private javax.swing.JPanel Right;
     private javax.swing.JPanel Top;
-    private javax.swing.JTextField customerAddress;
-    private javax.swing.JTextField customerINN;
-    private javax.swing.JTextField customerKPP;
-    private javax.swing.JTextField customerName;
-    private javax.swing.JTextField date;
+    private org.jdesktop.swingx.JXTextField customerAddress;
+    private org.jdesktop.swingx.JXTextField customerINN;
+    private org.jdesktop.swingx.JXTextField customerKPP;
+    private org.jdesktop.swingx.JXTextField customerName;
+    private org.jdesktop.swingx.JXTextField date;
     private javax.swing.JButton generate;
-    private javax.swing.JTextField itemName1;
-    private javax.swing.JTextField itemPrice1;
-    private javax.swing.JTextField itemQuantity1;
-    private javax.swing.JTextField itemUnit1;
-    private javax.swing.JTextField number;
-    private javax.swing.JTextField providerAddress;
-    private javax.swing.JTextField providerINN;
-    private javax.swing.JTextField providerKPP;
-    private javax.swing.JTextField providerName;
+    private org.jdesktop.swingx.JXTextField itemName1;
+    private org.jdesktop.swingx.JXTextField itemPrice1;
+    private org.jdesktop.swingx.JXTextField itemQuantity1;
+    private org.jdesktop.swingx.JXTextField itemUnit1;
+    private javax.swing.JPanel jPanel1;
+    private org.jdesktop.swingx.JXTextField number;
+    private org.jdesktop.swingx.JXTextField providerAddress;
+    private org.jdesktop.swingx.JXTextField providerINN;
+    private org.jdesktop.swingx.JXTextField providerKPP;
+    private org.jdesktop.swingx.JXTextField providerName;
     // End of variables declaration//GEN-END:variables
 }

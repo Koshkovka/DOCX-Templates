@@ -67,5 +67,10 @@
             <version>RELEASE90</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>org.swinglabs.swingx</groupId>
+            <artifactId>swingx-all</artifactId>
+            <version>1.6.5</version>
+        </dependency>
     </dependencies>
 </project>

@@ -69,6 +69,7 @@ public class mainWindow extends javax.swing.JFrame {
         chooseTemplate.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         chooseTemplate.setForeground(new java.awt.Color(255, 255, 255));
         chooseTemplate.setText("Выбрать шаблон");
+        chooseTemplate.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         chooseTemplate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chooseTemplateActionPerformed(evt);
@@ -80,6 +81,7 @@ public class mainWindow extends javax.swing.JFrame {
         closeButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         closeButton.setForeground(new java.awt.Color(255, 255, 255));
         closeButton.setText("Закрыть приложение");
+        closeButton.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeButtonActionPerformed(evt);
@@ -91,6 +93,7 @@ public class mainWindow extends javax.swing.JFrame {
         openMainPage.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         openMainPage.setForeground(new java.awt.Color(255, 255, 255));
         openMainPage.setText("Главная");
+        openMainPage.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         openMainPage.setPreferredSize(new java.awt.Dimension(300, 60));
         openMainPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +129,7 @@ public class mainWindow extends javax.swing.JFrame {
         rightPanel.add(mainPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1310, 920));
 
         templates.setBackground(new java.awt.Color(86, 128, 233));
+        templates.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         templates.setForeground(new java.awt.Color(255, 255, 255));
         templates.setPreferredSize(new java.awt.Dimension(1620, 1080));
 
@@ -136,12 +140,13 @@ public class mainWindow extends javax.swing.JFrame {
         rentButton.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         rentButton.setForeground(new java.awt.Color(255, 255, 255));
         rentButton.setText("Выбрать");
+        rentButton.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         rentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rentButtonActionPerformed(evt);
             }
         });
-        rentPanel.add(rentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 700, -1, 60));
+        rentPanel.add(rentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 700, 1290, 60));
 
         rentImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.jpg"))); // NOI18N
         rentPanel.add(rentImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 1250, 663));
@@ -155,6 +160,7 @@ public class mainWindow extends javax.swing.JFrame {
         salesButton.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         salesButton.setForeground(new java.awt.Color(255, 255, 255));
         salesButton.setText("Выбрать");
+        salesButton.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         salesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salesButtonActionPerformed(evt);
@@ -182,6 +188,7 @@ public class mainWindow extends javax.swing.JFrame {
         invoiceButton.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         invoiceButton.setForeground(new java.awt.Color(255, 255, 255));
         invoiceButton.setText("Выбрать");
+        invoiceButton.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         invoiceButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 invoiceButtonActionPerformed(evt);

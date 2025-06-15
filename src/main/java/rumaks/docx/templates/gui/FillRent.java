@@ -41,165 +41,169 @@ public class FillRent extends javax.swing.JDialog {
     private void initComponents() {
 
         Fields = new javax.swing.JPanel();
-        agreementNumber = new javax.swing.JTextField();
-        agreementDate = new javax.swing.JTextField();
-        city = new javax.swing.JTextField();
-        tenantFullName = new javax.swing.JTextField();
-        landlordShortName = new javax.swing.JTextField();
-        landlordFullName = new javax.swing.JTextField();
-        startDate = new javax.swing.JTextField();
-        rentAmount = new javax.swing.JTextField();
-        endDate = new javax.swing.JTextField();
-        propertyAddress = new javax.swing.JTextField();
-        propertyDescription = new javax.swing.JTextField();
-        tenantShortName = new javax.swing.JTextField();
-        rentAmountWords = new javax.swing.JTextField();
-        paymentDay = new javax.swing.JTextField();
+        agreementNumber = new org.jdesktop.swingx.JXTextField();
+        agreementDate = new org.jdesktop.swingx.JXTextField();
+        city = new org.jdesktop.swingx.JXTextField();
+        landlordFullName = new org.jdesktop.swingx.JXTextField();
+        landlordShortName = new org.jdesktop.swingx.JXTextField();
+        tenantFullName = new org.jdesktop.swingx.JXTextField();
+        tenantShortName = new org.jdesktop.swingx.JXTextField();
+        propertyDescription = new org.jdesktop.swingx.JXTextField();
+        propertyAddress = new org.jdesktop.swingx.JXTextField();
+        startDate = new org.jdesktop.swingx.JXTextField();
+        endDate = new org.jdesktop.swingx.JXTextField();
+        rentAmount = new org.jdesktop.swingx.JXTextField();
+        rentAmountWords = new org.jdesktop.swingx.JXTextField();
+        paymentDay = new org.jdesktop.swingx.JXTextField();
         generate = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Fields.setBackground(new java.awt.Color(193, 200, 228));
         Fields.setPreferredSize(new java.awt.Dimension(400, 450));
+        Fields.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        agreementNumber.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        agreementNumber.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         agreementNumber.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        agreementNumber.setText("Номер договора");
+        agreementNumber.setPrompt("Номер договора");
+        agreementNumber.setPromptBackround(new java.awt.Color(64, 86, 161));
+        agreementNumber.setPromptForeground(new java.awt.Color(255, 255, 255));
+        Fields.add(agreementNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 388, 32));
 
-        agreementDate.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        agreementDate.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         agreementDate.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        agreementDate.setText("Дата заключения (в формате \"дд.мм.гггг\")");
+        agreementDate.setPrompt("Дата заключения (в формате \"дд.мм.гггг\")");
+        agreementDate.setPromptBackround(new java.awt.Color(64, 86, 161));
+        agreementDate.setPromptForeground(new java.awt.Color(255, 255, 255));
+        agreementDate.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(agreementDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 44, 388, 32));
 
-        city.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        city.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         city.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        city.setText("Город заключения");
+        city.setPrompt("Город заключения");
+        city.setPromptBackround(new java.awt.Color(64, 86, 161));
+        city.setPromptForeground(new java.awt.Color(255, 255, 255));
+        city.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 82, 388, 32));
 
-        tenantFullName.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        tenantFullName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tenantFullName.setText("Полное название компании арендатора");
-
-        landlordShortName.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        landlordShortName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        landlordShortName.setText("Краткое имя арендодателя ");
-
-        landlordFullName.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        landlordFullName.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         landlordFullName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        landlordFullName.setText("Полное название компании арендодателя");
+        landlordFullName.setPrompt("Полное название компании арендодателя");
+        landlordFullName.setPromptBackround(new java.awt.Color(64, 86, 161));
+        landlordFullName.setPromptForeground(new java.awt.Color(255, 255, 255));
+        landlordFullName.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(landlordFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 120, 388, 32));
 
-        startDate.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        startDate.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        startDate.setText("Дата начала аренды (в формате \"дд.мм.гггг\")");
+        landlordShortName.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
+        landlordShortName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        landlordShortName.setPrompt("Краткое имя арендодателя");
+        landlordShortName.setPromptBackround(new java.awt.Color(64, 86, 161));
+        landlordShortName.setPromptForeground(new java.awt.Color(255, 255, 255));
+        landlordShortName.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(landlordShortName, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 158, 388, 32));
 
-        rentAmount.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        rentAmount.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        rentAmount.setText("Сумма арендной платы (цифрами)");
+        tenantFullName.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
+        tenantFullName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tenantFullName.setPrompt("Полное название компании арендатора");
+        tenantFullName.setPromptBackround(new java.awt.Color(64, 86, 161));
+        tenantFullName.setPromptForeground(new java.awt.Color(255, 255, 255));
+        tenantFullName.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(tenantFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 196, 388, 32));
 
-        endDate.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        endDate.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        endDate.setText("Дата окончания аренды (в формате \"дд.мм.гггг\")");
-
-        propertyAddress.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        propertyAddress.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        propertyAddress.setText("Адрес имущества");
-
-        propertyDescription.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        propertyDescription.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        propertyDescription.setText("Описание имущества");
-
-        tenantShortName.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        tenantShortName.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         tenantShortName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tenantShortName.setText("Краткое имя арендатора");
+        tenantShortName.setPrompt("Краткое имя арендатора");
+        tenantShortName.setPromptBackround(new java.awt.Color(64, 86, 161));
+        tenantShortName.setPromptForeground(new java.awt.Color(255, 255, 255));
+        tenantShortName.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(tenantShortName, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 234, 388, 32));
 
-        rentAmountWords.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        propertyDescription.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
+        propertyDescription.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        propertyDescription.setPrompt("Описание имущества");
+        propertyDescription.setPromptBackround(new java.awt.Color(64, 86, 161));
+        propertyDescription.setPromptForeground(new java.awt.Color(255, 255, 255));
+        propertyDescription.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(propertyDescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 272, 388, 32));
+
+        propertyAddress.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
+        propertyAddress.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        propertyAddress.setPrompt("Адрес имущества");
+        propertyAddress.setPromptBackround(new java.awt.Color(64, 86, 161));
+        propertyAddress.setPromptForeground(new java.awt.Color(255, 255, 255));
+        propertyAddress.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(propertyAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 310, 388, 32));
+
+        startDate.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
+        startDate.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        startDate.setPrompt("Дата начала аренды (в формате \"дд.мм.гггг\")");
+        startDate.setPromptBackround(new java.awt.Color(64, 86, 161));
+        startDate.setPromptForeground(new java.awt.Color(255, 255, 255));
+        startDate.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(startDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 348, 388, 32));
+
+        endDate.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
+        endDate.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        endDate.setPrompt("Дата окончания аренды (в формате \"дд.мм.гггг\")");
+        endDate.setPromptBackround(new java.awt.Color(64, 86, 161));
+        endDate.setPromptForeground(new java.awt.Color(255, 255, 255));
+        endDate.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(endDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 386, 388, 32));
+
+        rentAmount.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
+        rentAmount.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        rentAmount.setPrompt("Сумма арендной платы (цифрами)");
+        rentAmount.setPromptBackround(new java.awt.Color(64, 86, 161));
+        rentAmount.setPromptForeground(new java.awt.Color(255, 255, 255));
+        rentAmount.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(rentAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 424, 388, 32));
+
+        rentAmountWords.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         rentAmountWords.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        rentAmountWords.setText("Сумма арендной платы (словами)");
+        rentAmountWords.setPrompt("Сумма арендной платы (словами)");
+        rentAmountWords.setPromptBackround(new java.awt.Color(64, 86, 161));
+        rentAmountWords.setPromptForeground(new java.awt.Color(255, 255, 255));
+        rentAmountWords.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(rentAmountWords, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 462, 388, 32));
 
-        paymentDay.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        paymentDay.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         paymentDay.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        paymentDay.setText("Число месяца, до которого производится оплата");
+        paymentDay.setPrompt("Число месяца, до которого производится оплата");
+        paymentDay.setPromptBackround(new java.awt.Color(64, 86, 161));
+        paymentDay.setPromptForeground(new java.awt.Color(255, 255, 255));
+        paymentDay.setSelectionColor(new java.awt.Color(64, 86, 161));
+        Fields.add(paymentDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 500, 388, 32));
 
-        javax.swing.GroupLayout FieldsLayout = new javax.swing.GroupLayout(Fields);
-        Fields.setLayout(FieldsLayout);
-        FieldsLayout.setHorizontalGroup(
-            FieldsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FieldsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(FieldsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(agreementNumber, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(agreementDate)
-                    .addComponent(city)
-                    .addComponent(tenantFullName)
-                    .addComponent(landlordShortName)
-                    .addComponent(startDate, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(rentAmount)
-                    .addComponent(endDate)
-                    .addComponent(propertyAddress)
-                    .addComponent(propertyDescription)
-                    .addComponent(tenantShortName, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(rentAmountWords)
-                    .addComponent(paymentDay)
-                    .addComponent(landlordFullName))
-                .addContainerGap())
-        );
-        FieldsLayout.setVerticalGroup(
-            FieldsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FieldsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(agreementNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(agreementDate, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(city, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(landlordFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(landlordShortName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tenantFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tenantShortName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(propertyDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(propertyAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(startDate, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(endDate, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rentAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rentAmountWords, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(paymentDay, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(Fields, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 538));
 
-        generate.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        generate.setBackground(new java.awt.Color(86, 128, 233));
+        generate.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        generate.setForeground(new java.awt.Color(255, 255, 255));
         generate.setText("Сформировать");
+        generate.setBorder(new org.jdesktop.swingx.border.DropShadowBorder());
         generate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 generateActionPerformed(evt);
             }
         });
+        getContentPane().add(generate, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 544, 388, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Fields, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(generate, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
-                .addContainerGap())
+        jPanel1.setBackground(new java.awt.Color(193, 200, 228));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Fields, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(generate, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -317,20 +321,21 @@ public class FillRent extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fields;
-    private javax.swing.JTextField agreementDate;
-    private javax.swing.JTextField agreementNumber;
-    private javax.swing.JTextField city;
-    private javax.swing.JTextField endDate;
+    private org.jdesktop.swingx.JXTextField agreementDate;
+    private org.jdesktop.swingx.JXTextField agreementNumber;
+    private org.jdesktop.swingx.JXTextField city;
+    private org.jdesktop.swingx.JXTextField endDate;
     private javax.swing.JButton generate;
-    private javax.swing.JTextField landlordFullName;
-    private javax.swing.JTextField landlordShortName;
-    private javax.swing.JTextField paymentDay;
-    private javax.swing.JTextField propertyAddress;
-    private javax.swing.JTextField propertyDescription;
-    private javax.swing.JTextField rentAmount;
-    private javax.swing.JTextField rentAmountWords;
-    private javax.swing.JTextField startDate;
-    private javax.swing.JTextField tenantFullName;
-    private javax.swing.JTextField tenantShortName;
+    private javax.swing.JPanel jPanel1;
+    private org.jdesktop.swingx.JXTextField landlordFullName;
+    private org.jdesktop.swingx.JXTextField landlordShortName;
+    private org.jdesktop.swingx.JXTextField paymentDay;
+    private org.jdesktop.swingx.JXTextField propertyAddress;
+    private org.jdesktop.swingx.JXTextField propertyDescription;
+    private org.jdesktop.swingx.JXTextField rentAmount;
+    private org.jdesktop.swingx.JXTextField rentAmountWords;
+    private org.jdesktop.swingx.JXTextField startDate;
+    private org.jdesktop.swingx.JXTextField tenantFullName;
+    private org.jdesktop.swingx.JXTextField tenantShortName;
     // End of variables declaration//GEN-END:variables
 }
